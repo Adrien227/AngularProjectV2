@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<title>Projet Angular</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<style>
+
+</style>
+<body>
+
+<div class="w3-content" style="max-width:1400px">
+
+  <!-- Titre -->
+  <div class="monHeader"> 
+    <h1 style="font-size: 50px;"><b>Blog - Projet Angular</b></h1>
+    <p>Voici le blog réalisé dans le cadre du projet Angular</p>
+  </div>
+
+
+
+  <app-template-blog *ngIf="isActive('blog') == true"></app-template-blog>
+
+  <app-ajout-article *ngIf="isActive('ajoutArticle') == true"></app-ajout-article>
+
+
+
+  <div *ngIf="isActive('ajoutArticle') == false" style="text-align: center;">
+    <button mat-raised-button Basic color="primary" style="margin: 1% 0px 3% 0px; width: 13%;" (click)="affectation('ajoutArticle')"> Ajouter un article <mat-icon style="margin-left: 5px;">add_circle</mat-icon></button>
+  </div>
+
+
+</div>
+
+
+
+<!-- Footer -->
+<footer class="w3-container w3-center w3-dark-grey w3-padding-32 w3-margin-top">
+  <p>Projet Angular 2020</p>
+  <p>Elies LAJNEF - Adrien PARAISO</p>
+</footer>
+
+</body>
+</html>
+
+
+<router-outlet></router-outlet>

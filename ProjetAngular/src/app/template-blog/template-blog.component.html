@@ -1,5 +1,5 @@
 <div>
-  <button mat-button Basic color="primary" style="width: 13%;" (click)="myapp.affectation('blognonconnecte')"> Se déconnecter <mat-icon style="margin-left: 5px;">exit_to_app</mat-icon></button>
+  <button mat-button Basic color="primary" style="width: 13%;" (click)="myapp.affectation('blognonconnecte')" (click)="myapp.connexion = false"> Se déconnecter <mat-icon style="margin-left: 5px;">exit_to_app</mat-icon></button>
 </div>
 
 <div class="w3-row">
@@ -12,13 +12,13 @@
         <!-- <img src="./../../degrade.jpg" alt="fond" style="width:100%"> -->
         <div class="w3-container">
           <h3 style="font-size: 32px;"><b>ARTICLE 1</b></h3>
-          <h5>Description, <span class="dateArticle">31 Mai 2020</span></h5>
+          <h5>Citation d'Oscar Wilde</h5>
         </div>
 
         <div class="w3-container">
           <div>
             <div class="w3-col m8 s12">
-              <p><button class="w3-button w3-padding-large w3-white w3-border"><b>Lire l'article »</b></button>
+              <p><button (click)="myapp.affectation('article1')" class="w3-button w3-padding-large w3-white w3-border"><b>Lire l'article »</b></button>
                 <button onclick="document.getElementById('article1').style.display='none'" style="margin-left: 30px;" class="w3-button w3-padding-large w3-red w3-border"><b>Supprimer l'article</b></button></p>
             </div>
           </div>
@@ -55,19 +55,24 @@
           <h4>Articles les plus récents</h4>
         </div>
         <ul class="w3-ul w3-hoverable w3-white">
+          
           <li class="w3-padding-16">
+            <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-xlarge w3-right">×</span>
             <span class="w3-large">Article X</span><br>
             <span>Bla bla</span>
           </li>
           <li class="w3-padding-16">
+            <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-xlarge w3-right">×</span>
             <span class="w3-large">Article X</span><br>
             <span>Bla bla</span>
           </li> 
           <li class="w3-padding-16">
+            <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-xlarge w3-right">×</span>
             <span class="w3-large">Article X</span><br>
             <span>Bla bla</span>
           </li>   
           <li class="w3-padding-16 w3-hide-medium w3-hide-small">
+            <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-xlarge w3-right">×</span>
             <span class="w3-large">Article X</span><br>
             <span>Bla bla</span>
           </li>  

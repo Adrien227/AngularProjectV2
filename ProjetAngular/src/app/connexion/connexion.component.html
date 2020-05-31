@@ -33,7 +33,7 @@
     </mat-card-content>
     <mat-card-actions>
         <button mat-button (click)="myapp.affectation('blognonconnecte')">Retour</button>
-        <button type="submit" [disabled]="verifForm()" (click)="myapp.affectation('blog')" mat-raised-button color="primary">Connexion</button>
+        <button type="submit" [disabled]="verifForm()" (click)="myapp.affectation('blog')" (click)="myapp.connexion = true" mat-raised-button color="primary">Connexion</button>
     </mat-card-actions>
 </mat-card>
         

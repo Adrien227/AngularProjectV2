@@ -13,6 +13,8 @@ import { AjoutArticleComponent } from './ajout-article/ajout-article.component';
 import { TemplateBlogComponent } from './template-blog/template-blog.component';
 import { BlognonconnecteComponent } from './blognonconnecte/blognonconnecte.component';
 import { ConnexionComponent } from './connexion/connexion.component';
+import { Article1Component } from './article1/article1.component';
+import { PopupFormComponent } from './popup-form/popup-form.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { ConnexionComponent } from './connexion/connexion.component';
     AjoutArticleComponent,
     TemplateBlogComponent,
     BlognonconnecteComponent,
-    ConnexionComponent
+    ConnexionComponent,
+    Article1Component,
+    PopupFormComponent
   ],
   imports: [
     BrowserModule,

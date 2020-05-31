@@ -1,0 +1,23 @@
+
+<div id="erreur"></div>
+
+<mat-card class="example-card">
+
+    <mat-card-header>
+        <mat-card-title>Article 1</mat-card-title>
+        <mat-card-subtitle>{{ description }}</mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content>
+        <div class="example-container">
+            <p>{{ myapp.corpsArticle }}</p>
+        </div>
+    </mat-card-content>
+    <mat-card-actions>
+        <button *ngIf="myapp.connexion == false" mat-button (click)="myapp.affectation('blognonconnecte')">Retour</button> <!-- selon l'authentification, on "retombe" sur des pages différentes -->
+        <button *ngIf="myapp.connexion == true" mat-button (click)="myapp.affectation('blog')">Retour</button> <!-- selon l'authentification, on "retombe" sur des pages différentes -->
+        <button *ngIf="myapp.connexion == true" mat-raised-button color="primary" (click)="popup()" >Modifier l'article</button>
+    </mat-card-actions>
+</mat-card>
+        
+

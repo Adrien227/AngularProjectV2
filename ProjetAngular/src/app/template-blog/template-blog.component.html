@@ -75,3 +75,7 @@
     </div>
 
   </div><br>
+
+  <div *ngIf="myapp.isActive('ajoutArticle') == false" style="text-align: center;">
+    <button mat-raised-button Basic color="primary" style="margin: 1% 0px 3% 0px; width: 13%;" (click)="myapp.affectation('ajoutArticle')"> Ajouter un article <mat-icon style="margin-left: 5px;">add_circle</mat-icon></button>
+  </div>

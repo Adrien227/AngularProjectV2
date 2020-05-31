@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AppComponent } from './../app.component';
+import { FormControl, Validators, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-connexion',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConnexionComponent implements OnInit {
 
-  constructor() { }
+  login =  new FormControl('', [Validators.required]);
+  password =  new FormControl('', [Validators.required]);
+
+  hide = true;
+
+  constructor(public myapp: AppComponent) { }
 
   ngOnInit(): void {
+  }
+
+  verifForm() {
+    if (this.login.hasError('required') || this.password.hasError('required')) {
+      return true;
+    } else {
+      return false;
+    }
   }
 
 }

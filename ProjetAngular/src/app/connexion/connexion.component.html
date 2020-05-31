@@ -13,25 +13,27 @@
         <div class="example-container">
             <form>
                 <mat-form-field>
-                    <mat-label><mat-icon style="margin-right: 1px;">title</mat-icon> Titre de l'article </mat-label>
-                    <input matInput [formControl]="titre" required>
+                    <mat-label><mat-icon style="margin-right: 1px;">create</mat-icon> Identifiant </mat-label>
+                    <input matInput [formControl]="login" required>
                     <!--  <mat-error *ngIf="titre.invalid">{{getErrorMessageTitre()}}</mat-error> -->
-                    <mat-error *ngIf="titre.hasError('required')">Veuillez entrer un <strong>titre</strong>.</mat-error>
+                    <mat-error *ngIf="login.hasError('required')">Veuillez entrer votre <strong>identifiant</strong>.</mat-error>
                 </mat-form-field>
                 <br>
 
                 <mat-form-field>
-                    <mat-label><mat-icon style="margin-right: 1px;">description</mat-icon> Description</mat-label>
-                    <input matInput [formControl]="description" required>
-                    <mat-error *ngIf="description.hasError('required')">Veuillez entrer une <strong>description</strong>.</mat-error>
+                    <mat-label><mat-icon style="margin-right: 1px;">lock</mat-icon> Mot de passe</mat-label>
+                    <input matInput [formControl]="password" required [type]="hide ? 'password' : 'text'">
+                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide"> 
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon></button>
+                    <mat-error *ngIf="password.hasError('required')">Veuillez entrer votre <strong>mot de passe</strong>.</mat-error>
                 </mat-form-field>
                 
             </form>
         </div>
     </mat-card-content>
     <mat-card-actions>
-        <button mat-button (click)="myapp.affectation('blog')">Retour</button>
-        <button type="submit" [disabled]="verifForm()" mat-raised-button color="primary">Créer l'article</button>
+        <button mat-button (click)="myapp.affectation('blognonconnecte')">Retour</button>
+        <button type="submit" [disabled]="verifForm()" (click)="myapp.affectation('blog')" mat-raised-button color="primary">Connexion</button>
     </mat-card-actions>
 </mat-card>
         

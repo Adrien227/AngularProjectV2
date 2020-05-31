@@ -13,4 +13,8 @@ export class TemplateBlogComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  suppression(){
+
+  }
+
 }

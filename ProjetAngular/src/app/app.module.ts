@@ -11,12 +11,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material-module';
 import { AjoutArticleComponent } from './ajout-article/ajout-article.component';
 import { TemplateBlogComponent } from './template-blog/template-blog.component';
+import { BlognonconnecteComponent } from './blognonconnecte/blognonconnecte.component';
+import { ConnexionComponent } from './connexion/connexion.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AjoutArticleComponent,
-    TemplateBlogComponent
+    TemplateBlogComponent,
+    BlognonconnecteComponent,
+    ConnexionComponent
   ],
   imports: [
     BrowserModule,

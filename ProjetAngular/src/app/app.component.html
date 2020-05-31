@@ -23,15 +23,18 @@
 
 
 
+  
+  <app-blognonconnecte *ngIf="isActive('blognonconnecte') == true"></app-blognonconnecte>
+
+  <app-article1 *ngIf="isActive('article1') == true"></app-article1>
+
+  <app-connexion *ngIf="isActive('connexion') == true"></app-connexion>
+
   <app-template-blog *ngIf="isActive('blog') == true"></app-template-blog>
 
   <app-ajout-article *ngIf="isActive('ajoutArticle') == true"></app-ajout-article>
 
 
-
-  <div *ngIf="isActive('ajoutArticle') == false" style="text-align: center;">
-    <button mat-raised-button Basic color="primary" style="margin: 1% 0px 3% 0px; width: 13%;" (click)="affectation('ajoutArticle')"> Ajouter un article <mat-icon style="margin-left: 5px;">add_circle</mat-icon></button>
-  </div>
 
 
 </div>

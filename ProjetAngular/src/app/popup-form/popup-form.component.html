@@ -1,0 +1,18 @@
+<h1 mat-dialog-title>Modifier l'article</h1>
+
+<div mat-dialog-content>
+    <mat-form-field style="width: 650px;">
+        <mat-label><mat-icon style="margin-right: 1px;">description</mat-icon> Description</mat-label>
+        <input matInput  [disabled]="true" [(ngModel)]="data.description" [formControl]="description" required>
+        <mat-error *ngIf="description.hasError('required')">Veuillez entrer une <strong>description</strong>.</mat-error>
+    </mat-form-field>
+  <mat-form-field style="width: 650px;" >
+    <mat-label>Corps de l'article</mat-label>
+    <textarea matInput rows="10" [(ngModel)]="data.corpsArticle" [formControl]="corps" required></textarea>
+    <mat-error *ngIf="description.hasError('required')">Veuillez remplir le <strong>corps de l'article</strong>.</mat-error>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Annuler</button>
+  <button mat-button [mat-dialog-close]="data.corpsArticle" cdkFocusInitial>Ok</button>
+</div>

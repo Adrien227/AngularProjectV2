@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppComponent } from './../app.component';
 
 @Component({
   selector: 'app-template-blog',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TemplateBlogComponent implements OnInit {
 
-  constructor() { }
+  constructor(public myapp: AppComponent) { }
 
   ngOnInit(): void {
+  }
+
+  suppression(){
+
   }
 
 }

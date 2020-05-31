@@ -7,7 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ProjetAngular';
-  rubriqueActive = 'blog';
+  rubriqueActive = 'blognonconnecte';
+  corpsArticle = '\"Soyez vous-même, les autres sont déjà pris\"  --Oscar Wilde'; // Pour la maquette
+
+  connexion = false;
 
   affectation(element: string){
     if (element !== this.rubriqueActive) {
